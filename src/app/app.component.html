@@ -1,0 +1,11 @@
+
+<!-- <button class="btn btn-primary" (click)="getTodos()">Get todos</button> -->
+<div class="container">
+<h3>Todos</h3>
+<div *ngIf="todos.length>0; else loading">
+  <li class="col md-8" *ngFor="let todo of todos" style="list-style:none">
+    <input class="col md-2" type="checkbox" [checked]="todo.isCompleted">       <span class="col md-6">{{todo.text}}</span>
+</li>
+</div>
+<ng-template #loading><img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif"></ng-template>
+</div>
